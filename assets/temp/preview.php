@@ -1,20 +1,20 @@
-<html lang="en" dir="ltr">
+<html lang='en' dir='ltr'>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Duodopa - Banner preview</title>
     <style>
 
       @font-face {
-          font-family: "sourcesans";
-          src: url("http://dev.granathreklam.se/banners/assets/fonts/SourceSansPro-Regular.otf") format("opentype");
+          font-family: 'sourcesans';
+          src: url('http://dev.granathreklam.se/banners/assets/fonts/SourceSansPro-Regular.otf') format('opentype');
           font-weight: normal;
           font-style: normal;
       }
 
       html, body {
         margin: 0px;
-        font-family: "sourcesans", "Helvetica Neue", Arial, sans-serif;
+        font-family: 'sourcesans', 'Helvetica Neue', Arial, sans-serif;
         font-size: 13px;
         color: #4a4a4a;
         background-color: #e7c6cb;
@@ -84,13 +84,13 @@
   </head>
   <body>
 
-    <div id="outer-wrapper">
-      <div id="granath-bg"></div>
-      <div id="inner-wrapper">
-        <iframe src="http://dev.granathreklam.se/banners/duodopa/202002/980x120/980x120.html" id="banner-iframe"></iframe>
-        <div id="banner-info">
-          <div id="banner-dimension"></div>
-          <div id="banner-title">Dudopa</div>
+    <div id='outer-wrapper'>
+      <div id='granath-bg'></div>
+      <div id='inner-wrapper'>
+        <iframe src="http://dev.granathreklam.se/banners/duodopa/2020-02/980x120/980x120.html" id='banner-iframe'></iframe>
+        <div id='banner-info'>
+          <div id='banner-dimension'><?php $bannerWidth . 'x' . $bannerHeight ?></div>
+          <div id='banner-title'><?php $bannerClient ?></div>
         </div>
       </div>
     </div>

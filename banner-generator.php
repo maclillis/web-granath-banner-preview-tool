@@ -14,7 +14,7 @@
     <div id="granath-bg"></div>
     <h1 class="site-title">Banner Preview Generator <sup>v.0.5</sup></h1>
     <div id="inner-wrapper">
-      <form id="granath-form-wrapper" action="#" method="post">
+      <form id="granath-form-wrapper" action="form.php" method="post">
         <div class="form-col">
           <div class="form-title">
             <h2>Välj alternativ</h2>
@@ -35,13 +35,13 @@
           <input type="text" name="preview_location" placeholder="Preview URL" />
         </div>-->
         <hr class="separator" />
-        <button type="submit">Generera</button>
+        <button type="submit" value="submit">Generera</button>
       </form>
     </div>
     <pre id="output"></pre>
   </div>
-  <script src="assets/js/script.js" type="text/javascript"></script>
-  <script src="assets/js/FileSaver.js" type="text/javascript"></script>
+  <!--<script src="assets/js/script.js" type="text/javascript"></script>
+  <script src="assets/js/FileSaver.js" type="text/javascript"></script>-->
 </body>
 
 </html>
