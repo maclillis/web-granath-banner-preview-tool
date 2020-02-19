@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+  //Form handling in AJAX
       $('#granath-form-wrapper').submit(function() {
           var formdata = $(this).serialize();
           $.ajax({
@@ -14,4 +16,7 @@ $(document).ready(function() {
 						})
             return false;
           });
+
+
+
       })

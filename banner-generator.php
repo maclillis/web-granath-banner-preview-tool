@@ -14,7 +14,7 @@
     <div id="granath-bg"></div>
     <h1 class="site-title">Banner Preview Generator <sup>v.0.5</sup></h1>
     <div id="inner-wrapper">
-      <form id="granath-form-wrapper" >
+      <form id="granath-form-wrapper">
         <div class="form-col">
           <div class="form-title">
             <h2>Välj alternativ</h2>
@@ -41,7 +41,6 @@
     <pre id="output"></pre>
   </div>
   <script src="assets/js/script.js" type="text/javascript"></script>
-  <!--<script src="assets/js/FileSaver.js" type="text/javascript"></script>-->
 </body>
 
 </html>
