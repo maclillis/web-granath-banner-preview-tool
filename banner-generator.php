@@ -11,9 +11,18 @@
 
 <body>
   <div id="outer-wrapper">
-    <div id="granath-bg"></div>
-    <h1 class="site-title">Banner Preview Generator <sup>v.0.5</sup></h1>
+    <h1 class="site-title">Testlänksgeneratorn <sup>v.0.5</sup></h1>
     <div id="inner-wrapper">
+
+      <div id="granath-fail-wrapper">
+        <div id="granath-fail">
+          <img src="assets/img/exclamation-circle-regular.svg" class="badge-check" />
+          <h3 class="after-h3">Något gick fel!</h3>
+          <h4 class="after-h4">Länken skapades inte, försök igen</h4>
+          <button name="back_btn" class="after-btn-error" id="back_btn">Tillbaka</button>
+        </div>
+      </div>
+
       <form id="granath-form-wrapper">
         <div class="form-col">
           <div class="form-title">
@@ -21,7 +30,7 @@
           </div>
           <div class="dimensions">
             <input type="number" name="width" placeholder="Bredd" id="form_width" />
-            <span>x</span>
+            <span style="font-size:18px;">x</span>
             <input type="number" name="height" placeholder="Höjd" id="form_height" />
           </div>
         </div>
@@ -32,8 +41,9 @@
           <input type="text" name="banner_url" placeholder="Banner URL" id="form_url" />
         </div>
         <hr class="separator" />
-        <button type="submit" name="submit" value="submit">Generera!</button>
+        <button type="submit" name="submit" value="submit" id="submit_btn">Generera!</button>
       </form>
+
       <div id="granath-sucess-wrapper">
         <div id="granath-sucess">
           <img src="assets/img/badge-check-regular.svg" class="badge-check" />
@@ -45,12 +55,9 @@
           </div>
         </div>
       </div>
-      <div id="granath-fail">
-        <img src="assets/img/exclamation-circle-regular.svg" class="badge-check" />
-        <h3 class="after-h3">Något gick fel!</h3>
-        <h4 class="after-h4">Länken skapades inte, försök igen</h4>
-        <button name="back_btn" class="after-btn-error" id="back_btn">Tillbaka</button>
-      </div>
+
+      <img src="http://dev.granathreklam.se/banners/assets/granathlogo.png" id="site-logo" />
+
   </div>
   </div>
   <script src="assets/js/script.js" type="text/javascript"></script>

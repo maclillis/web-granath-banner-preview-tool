@@ -11,8 +11,8 @@ $content = '<html lang="en" dir="ltr"><head> <meta charset="utf-8"> <meta name="
 $locUrlParse = parse_url($locUrl);
 $exLocUrl = $locUrlParse['path'].$locUrlParse['query'];
 
-$fp = fopen($_SERVER['DOCUMENT_ROOT'].dirname($exLocUrl) . '/preview.html','wb') or die (' File open: Error opening file!');
+/*$fp = fopen($_SERVER['DOCUMENT_ROOT'].dirname($exLocUrl) . '/preview.html','wb') or die (' File open: Error opening file!');
 fwrite($fp,$content);
-fclose($fp);
+fclose($fp);*/
 
 ?>
