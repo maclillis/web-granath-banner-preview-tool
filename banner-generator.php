@@ -31,9 +31,6 @@
         <div class="form-col">
           <input type="text" name="banner_url" placeholder="Banner URL" id="form_url" />
         </div>
-        <!--<div class="form-col">
-          <input type="text" name="preview_location" placeholder="Preview URL" />
-        </div>-->
         <hr class="separator" />
         <button type="submit" name="submit" value="submit">Generera</button>
       </form>
