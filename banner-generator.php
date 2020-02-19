@@ -32,10 +32,26 @@
           <input type="text" name="banner_url" placeholder="Banner URL" id="form_url" />
         </div>
         <hr class="separator" />
-        <button type="submit" name="submit" value="submit">Generera</button>
+        <button type="submit" name="submit" value="submit">Generera!</button>
       </form>
-    </div>
-    <pre id="output"></pre>
+      <div id="granath-sucess-wrapper">
+        <div id="granath-sucess">
+          <img src="assets/img/badge-check-regular.svg" class="badge-check" />
+          <h3 class="after-h3">Klart!</h3>
+          <h4 class="after-h4">Kopiera länken nedan</h4>
+          <div id="clipboard_wrapper">
+            <input type="text" name="preview_url" id="preview_url" value="https://www.granathreklam.se" readonly />
+            <button name="clipboard_btn" class="after-btn" id="clipboard_btn">Kopiera</button>
+          </div>
+        </div>
+      </div>
+      <div id="granath-fail">
+        <img src="assets/img/exclamation-circle-regular.svg" class="badge-check" />
+        <h3 class="after-h3">Något gick fel!</h3>
+        <h4 class="after-h4">Länken skapades inte, försök igen</h4>
+        <button name="back_btn" class="after-btn-error" id="back_btn">Tillbaka</button>
+      </div>
+  </div>
   </div>
   <script src="assets/js/script.js" type="text/javascript"></script>
 </body>
