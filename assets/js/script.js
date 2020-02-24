@@ -6,7 +6,7 @@ $(document).ready(function() {
       $.ajax({
         type: "POST",
         url: "../generator/form.php",
-        data: formdata,
+        data: formdata
         success: function() {
           console.log("form sucess!");
           $('#granath-form-wrapper').fadeOut('fast');
@@ -29,9 +29,18 @@ $(document).ready(function() {
 
   // Validation through jQuery Validate
   $("#granath-form-wrapper").validate({
-    errorContainer: "#error-wrapper",
-    errorLabelContainer: "#error-wrapper",
-    wrapper: "li",
+    errorContainer: "#granath-form-wrapper",
+    errorLabelContainer: "#granath-form-wrapper",
+    groups: {
+      dimensions: "width height"
+    },
+    errorPlacement: function(error, element) {
+      if (element.attr("name") == "width" || element.attr("name") == "height" ) {
+        error.insertAfter("#granath-form-wrapper");
+      } else {
+        error.insertAfter(element);
+      }
+    },
     rules: {
       height: {
         required: true
@@ -48,8 +57,8 @@ $(document).ready(function() {
       }
     },
     messages: {
-      width: "Fyll i bredd!",
-      height: "Fyll i höjd!",
+      width: "Fyll i mått!",
+      height: "Fyll i mått!",
       client: "Fyll i kund!",
       banner_url: "Fyll i adress!",
       url: "Se till att det är en giltig address"
@@ -57,11 +66,6 @@ $(document).ready(function() {
     submitHandler: function() {
       sendFormPOST();
 		}
-  });
-  
-  // Add padding to error-elements on invalid form
-  $("#granath-form-wrapper").bind("invalid-form.validate", function() {
-    $("#error-wrapper").css({padding:"20px"});
   });
 
   //Copy to clipboard button
