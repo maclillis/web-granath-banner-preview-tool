@@ -70,6 +70,22 @@ button:hover {
   background-color: #313131;
 }
 
+input.error {
+  border: 2px solid #d66c6c;
+}
+
+label.error {
+  width: 365px;
+  height: 17px;
+  font-size: 12px;
+  background-color: #f45757;
+  color: white;
+  text-align: center;
+  padding: 7px;
+  align-self: center;
+  border-radius: 50px;
+}
+
 #submit_btn {
   font-size: 18px;
 }
@@ -79,12 +95,33 @@ button:hover {
   color: #aaa;
 }
 
+::-webkit-input-internal-autofill-selected {
+  background-color: #ccc;
+}
+
+
+#error-wrapper {
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 365px;
+}
+
+#error-wrapper li {
+  list-style: none;
+  padding: 11px 10px;
+  text-align: center;
+  margin: 0 auto;
+  display: inline;
+}
+
 .site-title {
   text-align: center;
   font-family: "baskerville", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.7px;
   font-size: 50px;
   margin-top: 70px;
+  margin-bottom: 0px;
 }
 
 .site-title sup {
@@ -94,10 +131,16 @@ button:hover {
   position: relative;
 }
 
-#site-logo {
-  width: 170px;
-  margin: 80px auto;
-  display: flex;
+#granath-bg {
+  width: 100%;
+  height: 7%;
+  pointer-events: none;
+  position: absolute;
+  background: url(http://dev.granathreklam.se/banners/assets/granathlogo.png);
+  background-size: 165px;
+  background-position: 50% 12%;
+  background-repeat: no-repeat;
+  top: 650px;
 }
 
 .separator {
@@ -129,7 +172,7 @@ button:hover {
 #granath-sucess-wrapper {
   display: none;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 77px 0;
   text-align: center;
 }
 
@@ -141,7 +184,7 @@ button:hover {
   display: none;
   flex-direction: column;
   align-self: center;
-  margin: 0 auto;
+  margin: 77px 0;
   text-align: center;
 }
 
@@ -160,9 +203,6 @@ button:hover {
   margin-bottom: 42px;
 }
 
-#clipboard_wrapper {
-}
-
 button.after-btn {
   width: 83px;
   margin: 0 0 0 10px;
@@ -178,8 +218,8 @@ button.after-btn-error {
   height: 47px;
 }
 
-.badge-check {
-  width: 100px;
+#check {
+  width: 85px;
   margin: 22px;
   opacity: .6;
 }
@@ -191,12 +231,12 @@ button.after-btn-error {
 
 .form-col {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 10px 0;
+  align-self: center;
 }
 
-.form-col input,
-label {
+.form-col input {
   align-self: center;
   width: 350px;
   height: 45px;
@@ -241,10 +281,17 @@ label {
     font-size:  11px;
   }
 
+  #granath-bg {
+    top: 540px;
+  }
 
   .form-col input {
     width: 100%;
     height: 40px;
+  }
+
+  .dimensions {
+      margin: 0 auto;
   }
 
   .dimensions input {
@@ -257,6 +304,7 @@ label {
   }
 
   .form-col {
+    width: 100%;
     margin: 10px 0;
   }
 
