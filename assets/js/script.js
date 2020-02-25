@@ -6,9 +6,8 @@ $(document).ready(function() {
       $.ajax({
         type: "POST",
         url: "../generator/form.php",
-        data: formdata
+        data: formdata,
         success: function() {
-          console.log("form sucess!");
           $('#granath-form-wrapper').fadeOut('fast');
   
           setTimeout(function() {
@@ -16,7 +15,6 @@ $(document).ready(function() {
           }, 300);
         },
         error: function() {
-  
           $('#granath-form-wrapper').fadeOut('fast');
   
           setTimeout(function() {
@@ -28,19 +26,19 @@ $(document).ready(function() {
   }
 
   // Validation through jQuery Validate
-  $("#granath-form-wrapper").validate({
-    errorContainer: "#granath-form-wrapper",
-    errorLabelContainer: "#granath-form-wrapper",
+  $("#granath-form").validate({
+    /*errorContainer: "#granath-form-wrapper",
+    errorLabelContainer: "#granath-form-wrapper",*/
     groups: {
       dimensions: "width height"
     },
-    errorPlacement: function(error, element) {
+    /*errorPlacement: function(error, element) {
       if (element.attr("name") == "width" || element.attr("name") == "height" ) {
         error.insertAfter("#granath-form-wrapper");
       } else {
         error.insertAfter(element);
       }
-    },
+    },*/
     rules: {
       height: {
         required: true
@@ -64,7 +62,7 @@ $(document).ready(function() {
       url: "Se till att det är en giltig address"
     },
     submitHandler: function() {
-      sendFormPOST();
+      //sendFormPOST();
 		}
   });
 
@@ -91,7 +89,4 @@ $(document).ready(function() {
       $('#granath-form-wrapper').fadeIn('fast');
     }, 300);
   });
-
-
-
 })

@@ -8,7 +8,8 @@
   <meta name="googlebot-news" content="nosnippet">
   <title>Testlänksgeneratorn 0.5 | GRANATH</title>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>  <link href="assets/css/style.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
+  <link href="assets/css/style.css" rel="stylesheet" />
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
 </head>
@@ -26,8 +27,8 @@
           <button name="back_btn" class="after-btn-error" id="back_btn">Tillbaka</button>
         </div>
       </div>
-
-      <form id="granath-form-wrapper">
+    <div id="granath-form-wrapper">
+      <form id="granath-form">
       <div class="form-title">
             <h2>Välj alternativ</h2>
           </div>
@@ -45,9 +46,9 @@
           <input type="text" name="banner_url" placeholder="Banner URL" id="form_url" />
         </div>
         <hr class="separator" />
-        <div id="error-wrapper"></div>
         <button type="submit" name="submit" value="submit" id="submit_btn">Generera!</button>
       </form>
+    </div>
 
       <div id="granath-sucess-wrapper">
         <div id="granath-sucess">
