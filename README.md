@@ -1,8 +1,11 @@
 
-# Granath's Banner Preview tool - v0.5.5
+# Granath's Banner Preview tool - v0.6
 Internal generator tool to create banner preview links made with HTML5 and JavaScript. Not made for public use.
 
 ### Changelog
+
+#### 2020-02-24 - version 0.6 - Loka
+Added correct Preview URL and a working clipboard button.
 
 #### 2020-02-24 - version 0.5.6 - Ramlösa Fläder/Lime
 Added Form validation, animation support from GSJSAP and minor bug tweeks.

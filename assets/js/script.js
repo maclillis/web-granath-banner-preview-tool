@@ -3,11 +3,23 @@ $(document).ready(function() {
   // Nifty form handling in AJAX
   function sendFormPOST(){
       var formdata = $(this).serialize();
+      var formArray = $("form").serializeArray(),
+      len = formArray.length,
+      formObj = {};
+
+      for (i=0; i<len; i++) {
+        formObj[formArray[i].name] = formArray[i].value;
+      }
+
+      var previewUrl = formObj['banner_url']; 
+      previewUrl = previewUrl.substr(0, previewUrl.lastIndexOf("/") + 1) + 'preview.html' ;
+
       $.ajax({
         type: "POST",
         url: "../generator/form.php",
         data: formdata,
         success: function() {
+          $('#preview_url').val(previewUrl);
           $('#granath-form-wrapper').fadeOut('fast');
   
           setTimeout(function() {
@@ -27,18 +39,9 @@ $(document).ready(function() {
 
   // Validation through jQuery Validate
   $("#granath-form").validate({
-    /*errorContainer: "#granath-form-wrapper",
-    errorLabelContainer: "#granath-form-wrapper",*/
     groups: {
       dimensions: "width height"
     },
-    /*errorPlacement: function(error, element) {
-      if (element.attr("name") == "width" || element.attr("name") == "height" ) {
-        error.insertAfter("#granath-form-wrapper");
-      } else {
-        error.insertAfter(element);
-      }
-    },*/
     rules: {
       height: {
         required: true
@@ -62,7 +65,7 @@ $(document).ready(function() {
       url: "Se till att det är en giltig address"
     },
     submitHandler: function() {
-      //sendFormPOST();
+      sendFormPOST();
 		}
   });
 

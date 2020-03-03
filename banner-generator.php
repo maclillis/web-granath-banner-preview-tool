@@ -1,3 +1,6 @@
+<?php 
+include("form.php")
+?>
 <!DOCTYPE html>
 <html>
 
@@ -7,6 +10,9 @@
   <meta name="googlebot" content="noindex">
   <meta name="googlebot-news" content="nosnippet">
   <title>Testlänksgeneratorn 0.5 | GRANATH</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://granathreklam.se/wp-content/themes/Granath/images/grafik/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://granathreklam.se/wp-content/themes/Granath/images/grafik/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://granathreklam.se/wp-content/themes/Granath/images/grafik/favicons/favicon-16x16.png">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
   <link href="assets/css/style.css" rel="stylesheet" />
@@ -16,7 +22,7 @@
 
 <body>
   <div id="outer-wrapper">
-    <h1 class="site-title">Testlänksgeneratorn <sup>v.0.5</sup></h1>
+    <h1 class="site-title">Testlänksgeneratorn <sup>v.0.6</sup></h1>
     <div id="inner-wrapper">
 
       <div id="granath-fail-wrapper">
@@ -58,7 +64,7 @@
           <h3 class="after-h3">Klart!</h3>
           <h4 class="after-h4">Använd länken nedan</h4>
           <div id="clipboard_wrapper">
-            <input type="text" name="preview_url" id="preview_url" value="https://www.granathreklam.se" readonly />
+            <input type="text" name="preview_url" id="preview_url" value=" " readonly />
             <button name="clipboard_btn" class="after-btn" id="clipboard_btn">Kopiera</button>
           </div>
         </div>
