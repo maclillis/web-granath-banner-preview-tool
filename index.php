@@ -1,6 +1,3 @@
-<?php 
-include("form.php")
-?>
 <!DOCTYPE html>
 <html>
 
@@ -9,14 +6,13 @@ include("form.php")
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="googlebot" content="noindex">
   <meta name="googlebot-news" content="nosnippet">
-  <title>Testlänksgeneratorn 0.5 | GRANATH</title>
+  <title>Testlänksgeneratorn 0.6 | GRANATH</title>
   <link rel="icon" type="image/png" sizes="32x32" href="https://granathreklam.se/wp-content/themes/Granath/images/grafik/favicons/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="https://granathreklam.se/wp-content/themes/Granath/images/grafik/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://granathreklam.se/wp-content/themes/Granath/images/grafik/favicons/favicon-16x16.png">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
   <link href="assets/css/style.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
 </head>
 
@@ -27,14 +23,14 @@ include("form.php")
 
       <div id="granath-fail-wrapper">
         <div id="granath-fail">
-          <img src="assets/img/exclamation-circle-regular.svg" class="badge-check" />
+          <img src="assets/img/exclamation-circle-regular.svg" id="badge-fail" />
           <h3 class="after-h3">Något gick fel!</h3>
           <h4 class="after-h4">Länken skapades inte, försök igen</h4>
           <button name="back_btn" class="after-btn-error" id="back_btn">Tillbaka</button>
         </div>
       </div>
     <div id="granath-form-wrapper">
-      <form id="granath-form">
+      <form id="granath-form" method="post" action="form.php">
       <div class="form-title">
             <h2>Välj alternativ</h2>
           </div>
@@ -59,11 +55,13 @@ include("form.php")
       <div id="granath-sucess-wrapper">
         <div id="granath-sucess">
         <svg id="check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504.71 504.71">
-          <path id="check-badge" d="M309.17,5.58a88,88,0,0,0-92.46,38.74A88,88,0,0,0,78.55,134.08,88,88,0,0,0,44.32,295.29a88,88,0,0,0,89.76,138.16,88,88,0,0,0,161.21,34.23,88,88,0,0,0,138.16-89.76,88,88,0,0,0,34.23-161.21A88,88,0,0,0,377.92,78.55,88,88,0,0,0,309.17,5.58Zm58,206.17-131,130a11,11,0,0,1-15.55-.06l-75.72-76.33a11,11,0,0,1,.06-15.56L171,224a11,11,0,0,1,15.56.06l42.15,42.49,97.2-96.42a11,11,0,0,1,15.55.06l25.82,26a11,11,0,0,1-.06,15.56Z" transform="translate(-3.65 -3.65)"/>
+          <path id="check-badge" d="M512,256a88,88,0,0,0-57.1-82.4A88,88,0,0,0,338.4,57.1a88,88,0,0,0-164.8,0A88,88,0,0,0,57.1,173.6a88,88,0,0,0,0,164.8A88,88,0,0,0,173.6,454.9a88,88,0,0,0,164.8,0A88,88,0,0,0,454.9,338.4,88,88,0,0,0,512,256Z" transform="translate(-3.65 -3.65)"/>
+          <path id="check-mark" class="cls-1" d="M368.63,211.33l-131,130a11,11,0,0,1-15.55-.06l-75.72-76.33a11,11,0,0,1,.06-15.56l26-25.82a11,11,0,0,1,15.56.06l42.15,42.49,97.21-96.42a11,11,0,0,1,15.54.06l25.83,26a11,11,0,0,1-.06,15.56Z" style="fill:white;" />
         </svg>
           <h3 class="after-h3">Klart!</h3>
           <h4 class="after-h4">Använd länken nedan</h4>
           <div id="clipboard_wrapper">
+            <label id="clip_complete">Kopierad!</label>
             <input type="text" name="preview_url" id="preview_url" value=" " readonly />
             <button name="clipboard_btn" class="after-btn" id="clipboard_btn">Kopiera</button>
           </div>

@@ -2,7 +2,9 @@ $(document).ready(function() {
 
   // Nifty form handling in AJAX
   function sendFormPOST(){
-      var formdata = $(this).serialize();
+      var formdata = $('#granath-form').serialize();
+      var postUrl = $('#granath-form').attr("action");
+	    var requestMethod = $('#granath-form').attr("method");
       var formArray = $("form").serializeArray(),
       len = formArray.length,
       formObj = {};
@@ -15,28 +17,26 @@ $(document).ready(function() {
       previewUrl = previewUrl.substr(0, previewUrl.lastIndexOf("/") + 1) + 'preview.html' ;
 
       $.ajax({
-        type: "POST",
-        url: "../generator/form.php",
+        type: requestMethod,
+        url: postUrl,
         data: formdata,
         success: function() {
-          $('#preview_url').val(previewUrl);
-          $('#granath-form-wrapper').fadeOut('fast');
-  
-          setTimeout(function() {
+
+          setTimeout(() => {
+            $('#preview_url').val(previewUrl);
+            $('#granath-form-wrapper').fadeOut('fast');
             $('#granath-sucess-wrapper').fadeIn('fast');
+            gsap.to('#check-badge', 6, {transformOrigin: "50% 50%", rotation:360, ease:Linear.easeNone, repeat:-1})
           }, 300);
         },
         error: function() {
-          $('#granath-form-wrapper').fadeOut('fast');
-  
-          setTimeout(function() {
+          setTimeout(() => {
+            $('#granath-form-wrapper').fadeOut('fast');
             $('#granath-fail-wrapper').fadeIn('fast');
           }, 300);
         }
       })
-      return false;
   }
-
   // Validation through jQuery Validate
   $("#granath-form").validate({
     groups: {
@@ -81,8 +81,9 @@ $(document).ready(function() {
       /* Copy the text inside the text field */
       document.execCommand("copy");
 
-      $("#clipboard_btn").animate({backgroundColor: "#517d51"}, 100);
-      $("#clipboard_btn").html('Kopierad!');
+      var ccomplete_Tl = gsap.timeline({repeat:1, repeatDelay:1, yoyo:true});
+
+      ccomplete_Tl.fromTo("#clip_complete", 0.7, {opacity:0, display:"block"}, {opacity:1});
   });
 
   $('#back_btn').click(function(){
